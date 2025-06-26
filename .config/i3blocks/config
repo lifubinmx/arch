@@ -18,14 +18,14 @@ markup=pango
 #interval=once
 
 [publicip]
+color=#005fff
 command=curl ifconfig.me | xargs
 interval=600
-label=Pub:
 
 [privateip]
+color=#00ff00
 command=hostname -i
 interval=600
-label=Pri:
 
 [weather]
 command=curl -m 1 wttr.in?format=3 2>/dev/null
