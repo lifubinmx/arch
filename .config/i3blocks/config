@@ -1,0 +1,48 @@
+# i3blocks/config
+# @author lifubinmx@qq.com
+# @2025
+#
+# Global properties
+separator=true
+separator_block_width=20
+markup=pango
+
+#[documentation]
+#full_text=Documentation
+#website=https://vivien.github.io/i3blocks
+#command=xdg-open "$website"
+#color=#f12711
+
+#[greetings]
+#command=echo "Hello, $USER!"
+#interval=once
+
+[publicip]
+command=curl ifconfig.me | xargs
+interval=600
+label=Pub:
+
+[privateip]
+command=hostname -i
+interval=600
+label=Pri:
+
+[weather]
+command=curl -m 1 wttr.in?format=3 2>/dev/null
+interval=3600
+
+[cpu]
+command=top -bn1 | grep "Cpu(s)" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | awk '{print 100 - $1"%"}'
+min_width=100
+align=center
+interval=5
+label=CPU:
+
+[memory]
+command=free -h | awk '/^Mem/ {print $3"/"$2}'
+interval=5
+label=MEM:
+
+[time]
+command=date '+%H:%M'
+interval=60

@@ -2,11 +2,14 @@
 !.zshrc
 !.bashrc
 !.bash_profile
-!.config/fcitx/**
-!.config/fcitx5/**
+!.config/
+!.config/fish
 !.config/fish/**
+!.config/i3
 !.config/i3/**
+!.config/i3blocks
 !.config/i3blocks/**
+!.config/ranger
 !.config/ranger/**
 !.gitignore
 !.vimrc
